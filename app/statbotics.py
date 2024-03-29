@@ -1,7 +1,7 @@
 import requests
 
 API_URL = 'https://api.statbotics.io/v2'
-COMP_ID = '2024mbr'
+COMP_ID = '2024camb'
 
 
 def match_info(match_id: str):
