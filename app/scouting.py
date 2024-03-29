@@ -14,7 +14,7 @@ cred = credentials.Certificate(
 app = firebase_admin.initialize_app(cred)
 db = firestore.client()
 
-teams_ref = db.collection(u'years/2023/regionals/cur/teams')
+teams_ref = db.collection(u'years/2024/regionals/mbr/teams')
 
 
 def get_pit_info(team_num) -> Optional[Dict[str, Any]]:
@@ -35,7 +35,7 @@ def get_team_stats(team_num) -> Optional[Dict[str, Any]]:
 
 
 def make_plot(team_num, fields) -> io.BytesIO:
-    # fields = ['Total Cycles', 'Teleop Cubes']
+    # fields = ['Total Cycles']
     field_query = [f'`{f}`' for f in fields]
     print(field_query)
     q = teams_ref.document(f'{team_num}').collection(
