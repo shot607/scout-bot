@@ -14,7 +14,7 @@ cred = credentials.Certificate(
 app = firebase_admin.initialize_app(cred)
 db = firestore.client()
 
-teams_ref = db.collection(u'years/2024/regionals/mbr/teams')
+teams_ref = db.collection(u'years/2024/regionals/camb/teams')
 
 
 def get_pit_info(team_num) -> Optional[Dict[str, Any]]:
